@@ -1,0 +1,15 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Entity\TestResult" table="test_result">
+        <id name="id" type="string" column="id" length="36">
+            <generator strategy="NONE"/>
+        </id>
+
+        <field name="testId" column="test_id" length="36" />
+        <field name="correctAnswers" column="correct_answers" type="json" />
+        <field name="incorrectAnswers" column="incorrect_answers" type="json" />
+    </entity>
+</doctrine-mapping>

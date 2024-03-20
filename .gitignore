@@ -1,0 +1,9 @@
+/vendor/
+/.idea
+/docker-compose.override.yml
+/var/log/*
+/var/cache/*
+!/var/log/.gitkeep
+!/var/cache/.gitkeep
+/.docker/db/*
+!/.docker/db/.gitkeep

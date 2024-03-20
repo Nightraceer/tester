@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker-compose up -d
+
+echo "Waiting to start the application..."
+sleep 5
+docker exec $(docker-compose ps -q app) composer install
+docker exec $(docker-compose ps -q app) bin/console doctrine:migrations:migrate --allow-no-migration --no-interaction
